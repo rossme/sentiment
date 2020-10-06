@@ -3,9 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
-# API Key gem for .ENV
-gem 'dotenv-rails', groups: [:development, :test]
-
 gem 'autoprefixer-rails'
 
 gem 'font-awesome-sass', '~> 5.6.1'
@@ -13,6 +10,9 @@ gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 
 gem 'devise'
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
@@ -40,6 +40,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  # API Key gem for .ENV
+  gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
