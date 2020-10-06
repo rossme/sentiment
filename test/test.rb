@@ -10,9 +10,9 @@ http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 request = Net::HTTP::Post.new(url)
 request["x-rapidapi-host"] = 'twinword-sentiment-analysis.p.rapidapi.com'
-request["x-rapidapi-key"] = 'a5d18ad3eemshcdad0aeb6bdd35fp112bbdjsn47ff90eb1494'
+request["x-rapidapi-key"] = ENV['SENTIMENT_API_KEY']
 request["content-type"] = 'application/x-www-form-urlencoded'
 request.body = "text=Hello World! What a fabulous day!"
 
 response = http.request(request)
-puts response.read_body["type"]
+puts response.read_body
