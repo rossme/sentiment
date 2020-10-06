@@ -15,21 +15,16 @@ class SentimentApi
 
         request = Net::HTTP::Post.new(url)
         request["x-rapidapi-host"] = 'twinword-twinword-bundle-v1.p.rapidapi.com'
+        # THIS KEY SHOULD BE IN .ENV
         request["x-rapidapi-key"] = 'a5d18ad3eemshcdad0aeb6bdd35fp112bbdjsn47ff90eb1494'
         request["content-type"] = 'application/x-www-form-urlencoded'
-        request.body = "text=Holidays!"
+        request.body = "text=What a nice day!"
 
         response = http.request(request)
         result = JSON.parse(response.read_body)
-        results = result["ratio"]
-        if results == 1
-            puts "You are happy!"
-            puts results
-        else
-            puts "Why so sad?"
-            puts results
-        end
+        return result
     end
 end
 
-SentimentApi.parsing
+words = SentimentApi.parsing
+puts words
