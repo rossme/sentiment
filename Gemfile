@@ -13,6 +13,10 @@ gem 'devise'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
+gem 'bootstrap', '~> 4.0.0'
+
+gem 'jquery-rails'
+
 gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
