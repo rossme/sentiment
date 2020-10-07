@@ -3,7 +3,6 @@ require 'net/http'
 require 'openssl'
 require 'json'
 
-
 class TwinwordApi
 
     def self.parsing
