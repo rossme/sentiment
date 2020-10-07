@@ -4,10 +4,10 @@ require 'openssl'
 require 'json'
 
 
-class SentimentApi
+class TwinwordApi
 
     def self.parsing
-        # HERE UNTIL .ENV WORKS CORRECTLY
+        # *SECURITY ISSUE* KEY HERE UNTIL .ENV WORKS CORRECTLY
         safe_code = 'a5d18ad3eemshcdad'
         url = URI("https://twinword-twinword-bundle-v1.p.rapidapi.com/sentiment_analyze/")
         puts "How do you feel?"
@@ -20,7 +20,7 @@ class SentimentApi
 
         request = Net::HTTP::Post.new(url)
         request["x-rapidapi-host"] = 'twinword-twinword-bundle-v1.p.rapidapi.com'
-        # THIS KEY SHOULD BE IN .ENV
+        # SECURITY ISSUE* KEY HERE UNTIL .ENV WORKS CORRECTLY
         request["x-rapidapi-key"] = "#{safe_code}0aeb6bdd35fp112bbdjsn47ff90eb1494"
         request["content-type"] = 'application/x-www-form-urlencoded'
         request.body = "text=#{user_input}"
@@ -31,7 +31,7 @@ class SentimentApi
     end
 
     def self.response
-        results = SentimentApi.parsing
+        results = TwinwordApi.parsing
 
         response = []
         results.each do |result|
@@ -41,4 +41,4 @@ class SentimentApi
     end
 end
 
-puts SentimentApi.response
+puts TwinwordApi.response
