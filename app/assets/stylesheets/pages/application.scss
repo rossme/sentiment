@@ -1,0 +1,14 @@
+// GRAPHICAL VARIABLES
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// EXTERNAL LIBRARIES
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+// CSS PARTIALS
+@import "components/index";
+@import "pages/index";
