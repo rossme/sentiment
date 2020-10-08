@@ -23,3 +23,15 @@ import 'bootstrap';
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+console.log('application.js succesfully loaded')
+
+import { twinwordApi } from "../components/twinwordApi";
+
+document.addEventListener('turbolinks:load', () => {
+
+    twinwordApi();
+    
+});
+
+
