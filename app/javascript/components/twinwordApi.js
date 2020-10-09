@@ -2,6 +2,7 @@ function twinwordApi() {
 	// ONCLICK FUNCTION WHERE SHOULD IT GO?? //
 	let formInput = document.getElementById("api-form-input");
 	let query = formInput.innerText.split(" ");
+	// encodeURI()
 	let searchQuery = query.join('%20').toLowerCase();
 	console.log(searchQuery);
 	let url = `https://twinword-sentiment-analysis.p.rapidapi.com/analyze/?text=${searchQuery}`

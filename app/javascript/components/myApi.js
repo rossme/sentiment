@@ -1,15 +1,3 @@
-<form class="m-4">
-  <div class="form-group">
-    <input type="text" class="form-control" id="my-value" placeholder="How are you feeling?">
-    </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<div id="api-form-output" class="h4 m-4"></div>
-
-
-<script>
-
 const form = document.querySelector('form');
 const input = document.querySelector('#my-value')
 const apiContainer = document.querySelector('#api-form-output');
@@ -49,5 +37,3 @@ const myApi = (message) => {
       console.log(err);
     });
 }
-
-</script>
