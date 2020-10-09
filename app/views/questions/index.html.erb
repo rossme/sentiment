@@ -1,53 +1,17 @@
-<form class="m-4">
-  <div class="form-group">
-    <input type="text" class="form-control" id="my-value" placeholder="How are you feeling?">
+<div class ="container">
+    <div class="row">
+        <div class="d-flex flex-column p-4">
+            <form class="m-4">
+                <div class="form-group form-group-lg">
+                    <input type="text" class="form-control form-control-lg" id="my-value" placeholder="How are you feeling?">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="d-flex flex-column p-4">
+            <div id="api-form-output" class="h5 m-4"></div>
+        </div>
     </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<div id="api-form-output" class="h4 m-4"></div>
-
-
-<script>
-
-const form = document.querySelector('form');
-const input = document.querySelector('#my-value')
-const apiContainer = document.querySelector('#api-form-output');
-
-// adding ev listener for submissions
-form.addEventListener('submit', (ev) => {
-  // prevent event from propagating
-  ev.preventDefault();
-
-	// cleaning previous results
-  apiContainer.innerHTML = '';
-
-  // lets get the form values
-  const value = encodeURI(input.value);
-
-  // call api and get result and do what I want
-  myApi(value)
-    .then((parsedJson) => {
-      apiContainer.innerHTML = `You are feeling ${parsedJson.type}`;
-    })
-})
-
-const myApi = (message) => {
-  let url = `https://twinword-sentiment-analysis.p.rapidapi.com/analyze/?text=${message}`
-
-  return fetch(url, {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "twinword-sentiment-analysis.p.rapidapi.com",
-        "x-rapidapi-key": "a5d18ad3eemshcdad0aeb6bdd35fp112bbdjsn47ff90eb1494"
-      }
-    })
-    .then(response => {
-      return response.json();
-    })
-    .catch(err => {
-      console.log(err);
-    });
-}
-
-</script>
+</div>
+<!-- HERE IS WHERE THE myAPI IS CALLED INTO THIS FILE. -->
+<%= javascript_pack_tag 'myApi' %>
