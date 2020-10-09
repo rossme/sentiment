@@ -1,4 +1,5 @@
 function twinwordApi() {
+	// ONCLICK FUNCTION WHERE SHOULD IT GO?? //
 	let formInput = document.getElementById("api-form-input");
 	let query = formInput.innerText.split(" ");
 	let searchQuery = query.join('%20').toLowerCase();
@@ -21,8 +22,6 @@ function twinwordApi() {
 			apiContainer.classList.remove('d-none');
 			document.getElementById("api-form-output").innerHTML = `You are feeling ${parsedJson.type}`;
 
-			const clickButton = document.getElementById("button-click");  
-    		clickButton.addEventListener("click", twinwordApi);
 		})
 		.catch(err => {
 			console.log(err);
