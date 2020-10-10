@@ -23,7 +23,6 @@ form.addEventListener('submit', (ev) => {
       apiContainer.innerHTML = `You are feeling ${parsedJson.type}`;
     })
 })
-console.log('Hello from myApi.js');
 
 const myApi = (message) => {
   let url = `https://twinword-sentiment-analysis.p.rapidapi.com/analyze/?text=${message}`
