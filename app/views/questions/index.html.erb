@@ -1,18 +1,17 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container d-flex justify-content-center" style="width: 700px;">
-        <h4 class="display-4 py-4">
-            <div class="my-4">
-                <%= Question.find(Question.pluck(:id).sample).description %>
-            </div>
+
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-md-8 offset-md-2 pt-4">
             <form autocomplete="off">
-                <div class="form-group form-group-lg">
-                    <input type="text" class="form-control form-control-lg p-4" id="my-value" placeholder="" style="font-size: 2rem;">
-                    <button type="submit" class="btn btn-secondary btn-lg btn-block py-2 my-4">Submit</button>
+                <div class="input-group mb-3 index-question">
+                    <input type="text" id="my-value" class="form-control py-4" style="font-size: 1.4em;" placeholder="<%= Question.find(Question.pluck(:id).sample).description %>" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-secondary px-4">?</button>
+                </div>
                 </div>
             </form>
-            <div id="api-form-output" class="my-4" style="color: hotpink;">
-            </div>
-        </h4>
+            <div id="api-form-output" class="my-4 text-center h4"></div>
+        </div>
     </div>
 </div>
 

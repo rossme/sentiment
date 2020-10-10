@@ -12,7 +12,7 @@ form.addEventListener('submit', (ev) => {
 	// cleaning previous results
   apiContainer.innerHTML = '';
 
-  // lets get the form values
+  // lets get the form values (%20)
   const value = encodeURI(input.value);
 
   // call api and get result and do what I want

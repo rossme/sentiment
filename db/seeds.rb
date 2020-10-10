@@ -7,7 +7,7 @@ puts "SEEDING QUESTIONS"
 data = [
     { description: "How are you today?" },
     { description: "How do you feel?" },
-    { description: "Did you sleep well last night?" },
+    { description: "Did you sleep well?" },
 ]
 
 data.each do | props |
