@@ -29,11 +29,9 @@ require("../packs/myApi")
 
 console.log('application.js succesfully loaded')
 
-import { twinwordApi } from "../components/twinwordApi";
 
 document.addEventListener('turbolinks:load', () => {
     
-    twinwordApi();
 
 });
 
