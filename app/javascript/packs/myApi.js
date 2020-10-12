@@ -1,4 +1,3 @@
-
 const form = document.querySelector('form');
 const input = document.querySelector('#my-value')
 const apiContainer = document.querySelector('#api-form-output');
@@ -41,3 +40,4 @@ const myApi = (message) => {
       console.log(err);
     });
 }
+console.log('2> myApi.js loaded')

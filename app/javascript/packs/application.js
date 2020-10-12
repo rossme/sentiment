@@ -2,6 +2,7 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+console.log('1> application.js loaded')
 
 require("@rails/ujs").start()
 require("turbolinks").start()
@@ -26,9 +27,6 @@ require("../packs/myApi")
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-
-console.log('application.js succesfully loaded')
-
 
 document.addEventListener('turbolinks:load', () => {
     
