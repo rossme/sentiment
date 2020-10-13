@@ -1,21 +1,22 @@
 
 <div class="row m-2">
-    <div class="col-md-8 offset-md-2 py-4">
+    <div class="col-md-6 offset-md-3 py-4">
         <div class="card p-2">
             <div class="card-body">    
                 <form autocomplete="off">
                     <div class="input-group index-question">
                         <input type="text" id="my-value" class="form-control py-4" placeholder="<%= Question.find(Question.pluck(:id).sample).description %>" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button type="submit" id="btn-api" class="btn btn-secondary"><i class="fas fa-question fa-lg"></i></button>
-                    </div>
+                        <div class="input-group-append">
+                            <button type="submit" id="btn-api" class="btn btn-secondary"><i class="fas fa-question fa-lg"></i></button>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<div id="api-form-output" class="my-4 text-center h4"></div>
+
+<div id="api-form-output" class="m-4 text-center h5"></div>
 
 <!-- HERE IS WHERE THE myAPI IS CALLED -->
 <%= javascript_pack_tag 'myApi' %>

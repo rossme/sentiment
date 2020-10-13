@@ -19,7 +19,13 @@ form.addEventListener('submit', (ev) => {
   // call api and get result and do what I want
   myApi(value)
     .then((parsedJson) => {
-      apiContainer.innerHTML = `You are feeling ${parsedJson.type}`;
+      if (parsedJson.type == 'positive') {
+        apiContainer.innerHTML = `You are feeling positive!`;
+      } else if (parsedJson.type == 'negative') {
+        apiContainer.innerHTML = `You feel negative!`;
+      } else {
+        apiContainer.innerHTML = `You are neutral, somewhere in the middle!`;
+      }
     })
 })
 
