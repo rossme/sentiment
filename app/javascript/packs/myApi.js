@@ -20,11 +20,11 @@ form.addEventListener('submit', (ev) => {
   myApi(value)
     .then((parsedJson) => {
       if (parsedJson.type == 'positive') {
-        apiContainer.innerHTML = `You are feeling positive!`;
+        apiContainer.innerHTML = `You are feeling great!`;
       } else if (parsedJson.type == 'negative') {
         apiContainer.innerHTML = `You feel negative!`;
       } else {
-        apiContainer.innerHTML = `You are neutral, somewhere in the middle!`;
+        apiContainer.innerHTML = `You feel kind of neutral!`;
       }
     })
 })
